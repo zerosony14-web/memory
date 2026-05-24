@@ -50,7 +50,11 @@ def check_card(cc, mes, ano, cvv, site_url, amount="5", proxy_str=None):
     try:
         proxy_cfg = get_proxy_config(proxy_str)
         with sync_playwright() as p:
-            browser = p.chromium.launch(channel='chrome', headless=True, proxy=proxy_cfg, args=['--no-sandbox', '--disable-dev-shm-usage'])
+            browser = p.chromium.launch(
+            headless=True,
+            proxy=proxy_cfg,
+            args=['--no-sandbox', '--disable-dev-shm-usage']
+)
             
             merchant = get_merchant(site_url, browser)
             if not merchant:
