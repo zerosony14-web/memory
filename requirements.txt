@@ -1,0 +1,5 @@
+flask
+playwright
+gunicorn
+playwright install chromium
+python
