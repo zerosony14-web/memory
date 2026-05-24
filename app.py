@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os, json
 os.environ['PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH'] = '/usr/bin/google-chrome-stable'
+os.environ['PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD'] = '1'
 from flask import Flask, request, jsonify
 import re, time, random
 from urllib.parse import urlparse, parse_qs
